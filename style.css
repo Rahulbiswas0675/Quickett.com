@@ -1,0 +1,782 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;   
+}
+body{
+    width: 100%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+header{
+    height: 4rem;
+    position: fixed;
+    width: 100%;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+}
+.logo{
+    margin-left: 5%;
+    width: 15rem;
+    height: 3rem;    
+    text-align: center;
+}
+.brandlogo{
+    color: white;
+    font-family:serif;
+}
+.brandlogo span{
+    color: orange;
+    font-size: 30px;
+}
+.brandlogo:hover{
+    color: orange;
+}
+.brandlogo:hover span{
+    color: white;
+}
+.boxcontainer{
+    border: 1px solid white;
+    width: 25%;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+}
+.search{
+    height: 100%;
+    width: 85%;
+    font-size: 20px;
+    text-align: center;
+    font-family: "nunito";
+    border-radius: 4px 0px 0px 4px;
+ }
+.boxcontainer a{
+    width: 15%;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+}
+.boxcontainer a:hover{
+    color: orange;
+}
+.icons{
+    width: 15rem;
+    height: 3rem;
+    margin-right: 5%;
+    align-items: center;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+.icons a{
+    font-size: 28px;
+    color: white;
+}
+.icons a:hover{
+    color: orange;
+}
+/*=============================Bar==========================*/
+.bar{
+    position: relative;
+    border: 1px solid white;
+    border-bottom: solid black 2px;
+}
+.main{
+    margin-top: 3.9rem;
+    width: 100%;
+    height: 2.5rem;
+}
+.icon{
+    margin-left: 15%;
+    width: 70%;
+    height: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 30px;
+}
+.icon a{
+    font-size: 24px;
+    color: black;
+}
+.icon a:hover{
+    font-size: 24px;
+    color: orange;
+}
+#toggler{
+     display: none;
+}
+.fa-bars{
+    display: none;
+}
+/*===========Header Section end============*/
+
+/*====================home section end================= */    
+.home{
+    height:35rem;
+    width: 100%;
+    background: url(poster/ads1.jpg);
+    background-size: cover;
+    border: 1px solid black;
+} 
+.contents{
+    margin-top: 5rem;
+    margin-left: 8%;
+    width: 60%;
+    opacity: 1;
+} 
+.contents h3{
+    font-size: 4rem;
+    color: #fff;
+    opacity: 1;
+} 
+.contents span{
+    font-size: 3.5rem;
+    color: black;
+    line-height: 1.5;
+    opacity: 1;
+} 
+.contents p{
+    font-size: 2.5rem;
+    color: #fff;
+    padding: 1rem 0;
+    line-height: 1.5;
+} 
+.main-btn{
+    margin-top: 2rem;
+    display: inline-block;
+    border-radius: 5rem;
+    background: black;
+    color: #fff;
+    padding: 0.9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+    opacity: 1;
+    text-decoration: none;
+    border:  1px solid white;
+} 
+.main-btn:hover{
+    background: orange;
+    transition: 0.5s linear;
+    color: black;
+    border:  1px solid black;
+    transform: scaleY(1.1);
+    transition: 1s;
+} 
+/* home section end */
+    
+/* products section start*/
+    .heading{
+        width: 100%;
+        text-align: center;
+        font-size: 24px;
+        color: #333;
+        padding: 1rem;
+        margin: 2rem 0;
+        background: rgb(182, 156, 169, 0.5);
+    }
+    .heading span{
+        color: orange;
+    }
+    .products .box-container{
+        width: 95%;
+        margin-left: 2.5%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    .box{
+        flex:0.5 0.5 18rem;
+        box-shadow: 0.7rem 1rem rgba(0,0,0,0.1);
+        border-radius: 10px;
+        border: .1rem solid rgba(0,0,0,0.1);
+        position: relative;
+        background: rgb(182, 156, 169, 0.5);
+    }
+    .box .discount{
+        position: absolute;
+        top: 35px; left: 30px;
+        padding: .7rem 1rem;
+        font-size: 20pxrem;
+        background: rgb(230, 194, 129);
+        border-radius: 6px;
+    }
+    .box .image{
+        position: relative;
+        text-align: center;
+        padding-top: 2rem;
+        overflow: hidden;
+    }
+    .image img{
+        height: 15rem;
+        width: 15rem;
+        border-radius: .5rem;
+    }
+    .box:hover .image img{
+        transform: scale(1.1);
+    }
+    .box:hover .discount{
+        top:  23px;
+        left: 18px;
+    }
+    .box .image form{
+        position: absolute;
+        bottom: -10rem; left: 0; right: 0;
+        display: block;
+    }
+    .box-container .box:hover .image form{
+        bottom: 0;
+        transition: .4s ease;
+    }
+    .image form input{
+        height: 2.5rem;
+        line-height: 2rem;
+        font-size: 1.5rem;
+        width: 50%;
+        background: orange;
+        color: #fff;
+    }
+    .image form .cart-btn{
+        width: 100%;
+        cursor: pointer;
+    }
+    .content{
+        margin-top: 5px;
+        margin-left: 15%;
+        width: 70%;
+        text-align: center;
+    }
+    .content h3{
+        font-size: 1.7rem;
+        color: #333;
+    }
+    .content .price{
+        font-size: 1.5rem;
+        color: black;
+        font-weight: bolder;
+        padding-top: 1rem;
+    }
+    .price span{
+        font-size: 1.5rem;
+        color: #999;
+        font-weight: lighter;
+        text-decoration: line-through !important;
+    }
+/* products section end*/
+    
+/* brands section start */    
+.brands{
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    height: 27rem;
+    width: 100%;
+    background: url(poster/brands3.jpg);
+    background-size: cover;
+}
+.brands .brandcontent{
+    margin-left: 5%;
+    width: 60%;
+    height: 25rem;
+    opacity: 0.9;
+}
+.brandcontent h3{
+    font-size: 4rem;
+    color: #fff;
+    opacity: 1;
+}
+.brandcontent span{
+    font-size: 3.5rem;
+    color: black;
+    padding: 1rem 0;
+    line-height: 1.5;
+    opacity: 1;
+}
+.brandcontent p{
+    font-size: 2rem;
+    color: #fff;
+    padding: 1rem 0;
+    line-height: 1;
+}
+.brands-btn{
+    display: inline-block;
+    margin: 1rem;
+    border-radius: 5rem;
+    background: black;
+    color: #fff;
+    padding: 0.9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    text-decoration: none;
+    border: 1px solid white;
+}
+.brands-btn:hover{
+    background:orange;
+    color: black;
+    border: 1px solid black;
+    transform: scale(1.1);
+    transition: 1s;
+}
+ /*brands name & logo */
+
+/*------Swiper auto playa css*/
+.swiper {
+    width: 100%;
+    height: 24.2rem;
+}
+.swiper-slide {
+position: relative;
+    
+}
+.swiper-slide .box{
+    display: flex;
+    background:rgb(168, 236, 238);
+}
+
+.swiper-slide .box img{
+    height: 24rem;
+    width: 100%;
+    border-radius: 10px;
+}
+.swiper-slide .contentss{
+    /* margin-left: 25rem; */
+    margin-top: -35rem;
+    position: relative;
+    z-index: 1;
+    max-width: 55rem;
+    opacity: 1;
+    padding: 12rem;
+}
+.contentss .h{
+    font-size: 5rem;
+    color: white;
+    opacity: 1;
+}
+.contentss span{
+    font-size: 3.5rem;
+    color:rgb(40, 203, 218);
+    padding: 1rem 0;
+    line-height: 1.5;
+    opacity: 1;
+}
+.contentss p{
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+.contentss .shop-btn{
+    display: inline-block;
+    margin: 1rem;
+    border-radius: 5rem;
+    background: black;
+    color: #fff;
+    padding: 0.9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+    opacity: 1;
+    border: 1px solid white;
+    text-decoration: none;
+}
+.contentss .shop-btn:hover{
+    transition: 0.5s linear;
+    color: white;
+    background: orange;
+    border: 1px solid black;
+    transform:rotatey(360deg);
+    transition: 1.8s ease;
+}
+/* brands section end */
+
+/* cetagory section start */    
+.cetagory{
+    /* position: absolute; */
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    height: 30rem;
+    width: 100%;
+    background: url(poster/brands2.jpg);
+    background-size: cover;
+    background-position: content;
+}
+.cetagory .cetagorycontent{
+    margin-left: 50%;
+    width: 50%;
+    opacity: 0.9;
+}
+.cetagory .cetagorycontent h3{
+    font-size: 4.5rem;
+    color: black;
+    opacity: 1;
+}
+.cetagory .cetagorycontent span{
+    font-size: 3rem;
+    color: orange;
+    padding: 1rem 0;
+    line-height: 1.5;
+    opacity: 1;
+}
+.cetagory .cetagorycontent p{
+    font-size: 1.5rem;
+    color: rgb(59, 86, 90);
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+.cetagory-btn{
+    display: inline-block;
+    margin: 1rem;
+    border-radius: 5rem;
+    background: black;
+    color: white;
+    padding: 0.9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    opacity: 1;
+    border: 1px solid orange;
+}
+.cetagory-btn:hover{
+    background: orange;
+    transition: 0.5s linear;
+    color: white;
+    transform: scale(1.1);
+    transition: 1s;
+    border: 1px solid black;
+}
+/* cetagory section end */
+
+
+
+/* fechare section start*/
+.icons-container{
+    width: 100%;
+    background: #eee;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.icons-container .iconss{
+    margin: 1rem;
+    padding: 1rem;
+    background: rgb(232, 215, 183);
+    border: 1rem solid rgb(26, 29, 30);
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex: 1 1 24rem;
+}
+.icons-container .iconss i{
+    font-size: 2.5rem;
+    height: 3rem;
+    margin-right: 2rem;
+    margin-top: 1.5rem;
+}
+.icons-container .iconss h3{
+    color: #333;
+    padding-bottom: .3rem;
+    font-size: 1.5rem;
+}
+
+.icons-container .iconss span{
+    color: #555;
+    font-size: 1.3rem;
+} 
+/*icons section end*/
+    
+/*Back to tap btn start*/
+.top{
+    height: 3rem;
+    width: 100%;
+}
+.top .top-btn{
+    margin-top: 1rem;
+    margin-left: 45%;
+    height: 2rem;
+    width: 10rem;
+    border: 2px solid orange;
+    background-color: black;
+    border-radius: 15px;
+    text-align: center;
+}
+.top-btn a{
+    color: white;
+    font-size: 1.4rem;
+}
+.top-btn:hover{
+    background: orange;
+    border: 2px solid black;
+}
+.top-btn:hover a{
+    color: black;
+}
+/*Back to tap btn end*/
+/*footer section start*/
+footer{
+    background-color: black;
+    width: 100%;
+    height: 20rem;
+}
+.footercont{
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+    gap: 1rem;
+}
+.fbox{
+    margin-top: 2rem;
+    width: 40%;
+    height: 16rem;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+.fbox h3{
+    color: white;
+    font-size: 1.3rem;
+    padding: 1rem;
+    font-weight: bold;  
+    text-align: center;
+    border-bottom: 1px solid orange;
+}
+.fbox a{
+    margin-left: 3%;
+    color: white;
+    display: block;
+    font-size: 1rem;
+    padding: 6px;
+}
+.fbox h4{
+    color: white;
+    margin-left: 5%;
+    width: 90%;
+    text-align: center;
+    border-bottom: 1px solid white;
+}
+.fbox p{
+    margin-left: 3%;
+    color: white;
+}
+.fbox a:hover{
+    color: orange;
+}
+.credit{
+    margin: 0;
+    width: 90%;
+    margin-left: 5%;
+    text-align: center;
+    border-top: 2px solid orange;
+}
+.credit span{
+    color: orange;
+}
+/*footer section end*/
+
+
+
+
+
+ /*mobile screen view*/
+ @media (max-width:1080px){
+    .icon{
+        width: 100%;
+        margin-left: 0;
+        gap: 6px;
+    }
+    .icon a{
+        width: 10rem;
+        font-size: 20px;
+    }
+    .home{
+        width: 100%;
+    }
+    .contents{
+        margin-top: 2rem;
+        margin-left: 6rem;
+    }
+    .contents h3{
+        font-size: 4rem;
+    }
+    .contents span{
+        font-size: 3rem;
+    }
+    .contents p{
+        font-size: 2rem;
+    }
+    .contents a{
+        font-size: 1.5rem;
+    }
+    .cetagory{
+        width: 100%;
+        
+    }
+    .cetagorycontent{
+        width: 80% !important;
+        margin-left: 10% !important;
+    }
+    .cetagorycontent h3{
+        font-size: 3rem !important;
+    }
+
+    
+    .fbox h3{
+        font-size: 1.5rem;
+        height: 1rem;
+    }
+    .fbox a{
+        font-size: 16px;
+    }
+    .fbox ion-icon{
+        font-size: 16px;
+    }
+ }
+@media (max-width:768px){
+        .fa-bars{
+            display: block;
+            position: fixed;
+            height: 30px;
+            width: 32px;
+            text-align: center;
+            margin-top: 1rem;
+            margin-left: 1rem;
+            font-size: 30px;
+            border: 1px solid rgb(249, 248, 248);
+            border-radius: 5px;
+            color: rgb(245, 235, 235);
+            z-index: 2;
+        }
+        .main{
+            display: none;
+        }
+        
+        #toggler:checked ~.main{
+            display: block;
+        }
+        .main{
+            height: 30rem;
+            background-color: #eee;
+        }
+        .icon{
+            margin-left: 0 !important;
+            margin-top: 0;
+            width: 100%;
+            height: 30rem;
+            display: flex;
+            flex-direction: column;
+            border-bottom: 1px solid black;
+            
+        }
+        .icon a{
+            text-align: center;
+            width: 100%;
+            padding: 1rem;
+            margin: 1rem;
+            background: rgb(168, 236, 236);
+            border:0.1rem solid rgb(77, 75, 75);
+            display: block;
+        }
+        .icon a:hover{
+            background: orange;
+            color:#fff;
+            transition: 1s;
+        }
+        
+        .logo{
+            margin-left: 1rem;
+            margin-top: 2px ;
+            font-size: 20px;
+        }
+        .boxcontainer{
+            position:absolute;
+            margin-left: 20rem;
+            width: 9rem;
+            height: 30px;
+        }
+        .search{
+            width: 7rem;
+        }
+        .icons{
+            margin-left: 34rem;
+            position:absolute;
+        }
+        .home{
+            width: 100%;
+        }
+        .contents{
+            margin-top: 4rem;
+        }
+        .contents h3{
+            font-size: 4rem;
+        }
+        .contents span{
+            font-size: 3rem;
+        }
+        .brandcontent{
+            margin-left: 0rem;
+            width: 90% !important;
+        }
+        .swiper {
+            width: 100%;
+        }
+        .contentss .h{
+            font-size: 3rem;
+        }
+        .contentss span{
+            font-size: 2rem;
+        }
+        .contentss p{
+            font-size: 1.2rem;
+        }
+        .contentss .shop-btn{
+            margin-left: -0.1rem;
+        }
+        .cetagory{
+            width: 100%;
+            
+        }
+        .cetagorycontent{
+            width: 80% !important;
+            margin-left: 10% !important;
+        }
+        .cetagorycontent h3{
+            font-size: 3rem !important;
+        }
+        .top{
+            width: 100%;
+        }
+        .top-btn{
+            margin-left: 40% !important;
+        }
+        /*footer section start*/
+        .footercont{
+            justify-content: center;
+            width: 90%;
+        }
+        .fbox{
+            width: auto;
+        }
+        .fbox h3{
+            font-size: 1.5rem;
+            height: 1rem;
+        }
+        .fbox a{
+            font-size: 16px;
+        }
+        .fbox ion-icon{
+            font-size: 16px;
+        }
+        .credit{
+            margin-top: 8px;
+            font-size: 12px;
+        }
+}
