@@ -15,7 +15,8 @@ body{
 }
 
 header{
-    height: 4rem;
+    top: 0;
+    height: 3rem;
     position: fixed;
     width: 100%;
     background: black;
@@ -26,17 +27,15 @@ header{
 }
 .logo{
     margin-left: 5%;
-    width: 15rem;
-    height: 3rem;    
     text-align: center;
 }
 .brandlogo{
     color: white;
     font-family:serif;
+    font-size: 2rem;
 }
 .brandlogo span{
     color: orange;
-    font-size: 30px;
 }
 .brandlogo:hover{
     color: orange;
@@ -47,7 +46,7 @@ header{
 .boxcontainer{
     border: 1px solid white;
     width: 25%;
-    height: 2.5rem;
+    height: 1.7rem;
     display: flex;
     align-items: center;
     text-align: center;
@@ -71,16 +70,14 @@ header{
     color: orange;
 }
 .icons{
-    width: 15rem;
-    height: 3rem;
     margin-right: 5%;
     align-items: center;
     display: flex;
-    gap: 30px;
+    gap: 2rem;
     justify-content: center;
 }
 .icons a{
-    font-size: 28px;
+    font-size: 1.7rem;
     color: white;
 }
 .icons a:hover{
@@ -88,23 +85,25 @@ header{
 }
 /*=============================Bar==========================*/
 .bar{
-    position: relative;
-    border: 1px solid white;
-    border-bottom: solid black 2px;
+    top: 3rem;
+    width: 100%;
+    height: 2rem;
+    position: fixed;
+    align-items: center;
+    display: flex;
+    z-index: 2;
+    background-color: white;
+    border-bottom: solid black 1px;
 }
 .main{
-    margin-top: 3.9rem;
     width: 100%;
-    height: 2.5rem;
 }
 .icon{
-    margin-left: 15%;
-    width: 70%;
-    height: 2.5rem;
+    margin-left: 5%;
+    width: 90%;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     display: flex;
-    gap: 30px;
 }
 .icon a{
     font-size: 24px;
@@ -124,25 +123,26 @@ header{
 
 /*====================home section end================= */    
 .home{
-    height:35rem;
+    margin-top: 5rem; 
+    height:25rem;
     width: 100%;
     background: url(poster/ads1.jpg);
     background-size: cover;
     border: 1px solid black;
 } 
 .contents{
-    margin-top: 5rem;
+    margin-top: 2rem;
     margin-left: 8%;
     width: 60%;
     opacity: 1;
 } 
 .contents h3{
-    font-size: 4rem;
+    font-size: 3rem;
     color: #fff;
     opacity: 1;
 } 
 .contents span{
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     color: black;
     line-height: 1.5;
     opacity: 1;
@@ -159,9 +159,9 @@ header{
     border-radius: 5rem;
     background: black;
     color: #fff;
-    padding: 0.9rem 3.5rem;
+    padding: 0.9rem 2rem;
     cursor: pointer;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     opacity: 1;
     text-decoration: none;
     border:  1px solid white;
@@ -193,6 +193,7 @@ header{
         width: 95%;
         margin-left: 2.5%;
         display: flex;
+        justify-content: space-around;
         flex-wrap: wrap;
         gap: 2rem;
     }
@@ -627,8 +628,6 @@ footer{
     .cetagorycontent h3{
         font-size: 3rem !important;
     }
-
-    
     .fbox h3{
         font-size: 1.5rem;
         height: 1rem;
@@ -641,25 +640,25 @@ footer{
     }
  }
 @media (max-width:768px){
+        .boxcontainer{
+            display: none;
+        }
         .fa-bars{
             display: block;
-            position: fixed;
-            height: 30px;
-            width: 32px;
-            text-align: center;
-            margin-top: 1rem;
-            margin-left: 1rem;
-            font-size: 30px;
+            position: absolute;
+            padding: 6px;
+            font-size: 1.5rem;
+            margin-left: 90%;
             border: 1px solid rgb(249, 248, 248);
             border-radius: 5px;
-            color: rgb(245, 235, 235);
+            color: white;
             z-index: 2;
         }
-        .main{
+        .bar{
             display: none;
         }
         
-        #toggler:checked ~.main{
+        #toggler:checked ~.bar{
             display: block;
         }
         .main{
@@ -710,29 +709,47 @@ footer{
             position:absolute;
         }
         .home{
+            margin-top: 3rem;
             width: 100%;
         }
         .contents{
-            margin-top: 4rem;
+            margin-top: 1rem;
+            width: 90%;
+            margin-left: 5%;
         }
         .contents h3{
-            font-size: 4rem;
+            font-size: 2.5rem;
         }
         .contents span{
-            font-size: 3rem;
+            font-size: 2rem;
         }
         .brandcontent{
             margin-left: 0rem;
             width: 90% !important;
         }
+        .brandcontent h3{
+            font-size: 2.5rem;
+        }
+        .brandcontent span{
+            font-size: 2.5rem;
+        }
+        .brandcontent p{
+            font-size: 2rem;
+        }
         .swiper {
             width: 100%;
+            height: 17rem;
+        }
+        .contentss{
+            position: absolute;
+            width: 90%;
+            margin-left: -25%;
         }
         .contentss .h{
-            font-size: 3rem;
+            font-size: 2rem;
         }
         .contentss span{
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         .contentss p{
             font-size: 1.2rem;
@@ -750,6 +767,12 @@ footer{
         }
         .cetagorycontent h3{
             font-size: 3rem !important;
+        }
+        .cetagorycontent span{
+            font-size: 2rem !important;
+        }
+        .cetagorycontent p{
+            font-size: 2rem !important;
         }
         .top{
             width: 100%;
